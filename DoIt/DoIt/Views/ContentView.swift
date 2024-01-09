@@ -9,33 +9,49 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = ViewModel(toDoItems: ToDoItem.examples)
-    @State private var presentSheet: Bool = false
+    @State private var presentCreateSheet: Bool = false
+    @State private var editableToDoItem: ToDoItem? = nil
     var body: some View {
         NavigationStack {
             List {
                 ForEach(viewModel.toDoItems) { item in
                     ToDoItemView(toDoItem: item)
+                        .swipeActions(allowsFullSwipe: false) {
+                            Button(role: .destructive) {
+                                viewModel.removeToDoItem(item)
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                            
+                            Button {
+                                editableToDoItem = item
+                            } label: {
+                                Label("Edit", systemImage: "pencil")
+                            }
+                            .tint(.blue)
+                        }
                 }
-                .onDelete(perform: { indexSet in
-                    viewModel.removeToDoItem(at: indexSet)
-                })
             }
             .toolbar(content: {
                 Button {
-                    presentSheet.toggle()
+                    presentCreateSheet = true
                 } label: {
                     Image(systemName: "plus")
                 }
             })
             .listStyle(.inset)
             .padding()
-            .sheet(isPresented: $presentSheet, content: {
+            .sheet(isPresented: $presentCreateSheet) {
                 CreateToDoItemView { todoitem in
-                    viewModel.addToDoItem(toDoItem: todoitem)
+                    viewModel.addToDoItem(todoitem)
                 }
-            })
+            }
+            .sheet(item: $editableToDoItem) { item in
+                EditToDoItemView(toDoItem: item) { todoitem in
+                    viewModel.saveToDoItem(todoitem)
+                }
+            }
         }
-        
     }
 }
 

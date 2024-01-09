@@ -15,12 +15,20 @@ extension ContentView {
             self.toDoItems = toDoItems
         }
         
-        func addToDoItem(toDoItem: ToDoItem) {
+        func addToDoItem(_ toDoItem: ToDoItem) {
             toDoItems.append(toDoItem)
         }
         
-        func removeToDoItem(at offsets: IndexSet) -> Void {
-            toDoItems.remove(atOffsets: offsets)
+        func removeToDoItem(_ toDoItem: ToDoItem) {
+            if let index = toDoItems.firstIndex(where: { $0.id == toDoItem.id }) {
+                toDoItems.remove(at: index)
+            }
+        }
+        
+        func saveToDoItem(_ toDoItem: ToDoItem) {
+            if let index = toDoItems.firstIndex(where: { $0.id == toDoItem.id }) {
+                toDoItems[index] = toDoItem
+            }
         }
     }
 }
