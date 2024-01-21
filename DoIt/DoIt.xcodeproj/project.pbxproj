@@ -17,6 +17,7 @@
 		83DB34232B1D2D530031BDF6 /* ToDoItemView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB34222B1D2D530031BDF6 /* ToDoItemView-ViewModel.swift */; };
 		83DB34252B1D38B20031BDF6 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB34242B1D38B20031BDF6 /* ContentView-ViewModel.swift */; };
 		83DE49F12B48688800661A08 /* CreateToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE49F02B48688800661A08 /* CreateToDoItemView.swift */; };
+		83FADCAA2B5C9ADF0012FB48 /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FADCA92B5C9ADF0012FB48 /* ToDoListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		83DB34222B1D2D530031BDF6 /* ToDoItemView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoItemView-ViewModel.swift"; sourceTree = "<group>"; };
 		83DB34242B1D38B20031BDF6 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
 		83DE49F02B48688800661A08 /* CreateToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateToDoItemView.swift; sourceTree = "<group>"; };
+		83FADCA92B5C9ADF0012FB48 /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 				83DB34202B1D035D0031BDF6 /* ToDoItemView.swift */,
 				83DE49F02B48688800661A08 /* CreateToDoItemView.swift */,
 				83DABF1F2B4CAE1A00014AE6 /* EditToDoItemView.swift */,
+				83FADCA92B5C9ADF0012FB48 /* ToDoListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				83DB34132B1BE6960031BDF6 /* ContentView.swift in Sources */,
 				83DB34252B1D38B20031BDF6 /* ContentView-ViewModel.swift in Sources */,
 				83DE49F12B48688800661A08 /* CreateToDoItemView.swift in Sources */,
+				83FADCAA2B5C9ADF0012FB48 /* ToDoListView.swift in Sources */,
 				83DB34232B1D2D530031BDF6 /* ToDoItemView-ViewModel.swift in Sources */,
 				83DB34212B1D035D0031BDF6 /* ToDoItemView.swift in Sources */,
 				83DB34112B1BE6960031BDF6 /* DoItApp.swift in Sources */,
